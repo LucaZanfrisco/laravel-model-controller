@@ -7,10 +7,17 @@
          @vite('resources/js/app.js')
     </head>
     <body>
-        <div class="container">
-            <h1>Template Classe 89</h1>
-            <img src="{{ Vite::asset('resources/img/pluto.webp') }}" alt="" srcset="">
+        <div class="container row mx-auto row-cols-xxl-5">
+            @foreach ($movies as $movie)    
+                <div class="card p-4 text-center col-12 col-md-4 col-xl-3">
+                    <h3>{{ $movie->title }}</h3>
+                    <div>Original title: {{ $movie->original_title }}</div>
+                    <div>Nationality: {{ $movie->nationality}}</div>
+                    <div>Date: {{ $movie->date }}</div>
+                    <div>Vote: {{ $movie->vote }}</div>
+                </div>        
+            @endforeach
         </div>
-
+        
     </body>
 </html>
