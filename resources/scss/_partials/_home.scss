@@ -1,0 +1,9 @@
+#home-main {
+    a {
+        text-decoration: none;
+        color: black;
+        &:hover{
+            background-color: #ccdcfd;
+        }
+    }
+}

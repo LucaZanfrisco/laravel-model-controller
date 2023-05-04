@@ -1,0 +1,25 @@
+#header{
+    height: 100px;
+    background-color: #ccdcfd;
+    color: black;
+    text-align: center;
+    border-radius: 1.5625rem;
+    margin-top: 1.25rem;
+    .nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        div{
+            &:hover{
+                color: #2b5ff6;
+                cursor: pointer;
+                text-decoration: underline 2px solid #2b5ff6;
+            }
+            a{
+                text-decoration: inherit;
+                color: inherit;
+            }
+        }
+    }
+}

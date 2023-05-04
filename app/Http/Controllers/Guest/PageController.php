@@ -14,4 +14,16 @@ class PageController extends Controller
 
         return view('home', compact('movies'));
     }
+    public function show($id){
+
+        $movie = Movie::find($id);
+
+        return view('movie', compact('movie'));
+    }
+    public function vote(){
+
+        $movies = Movie::select('*')->orderBy('vote', 'desc')->get();
+
+        return view('vote', compact('movies'));
+    }
 }
